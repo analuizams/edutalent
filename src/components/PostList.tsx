@@ -39,6 +39,8 @@ const PostList: React.FC = () => {
       key: 'id',
       width: 100,
       align: "center" as const,
+      defaultSortOrder: 'ascend' as const,
+      sorter: (a: IPost, b: IPost ) => parseInt(a.id) - parseInt(b.id),
     },
     {
       title: 'User Id',
@@ -46,6 +48,8 @@ const PostList: React.FC = () => {
       key: 'userId',
       width: 100,
       align: "center" as const,
+      defaultSortOrder: 'ascend' as const,
+      sorter: (a: IPost, b: IPost ) => parseInt(a.userId) - parseInt(b.userId),
     },
     {
       title: 'Title',
